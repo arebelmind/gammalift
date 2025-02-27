@@ -29,7 +29,7 @@
 </style>
 </head>
 <body class="body">
-  <div class="div-block-51"><img width="180px !important" loading="lazy" alt="" src="images/LOGO-1000-x-600-px-white---no-background-1.svg" class="image-10"></div>
+  <div class="div-block-51"><img width="180" loading="lazy" alt="" src="images/LOGO-1000-x-600-px-white---no-background-1.svg" class="image-10"></div>
   <div class="wrapper-2">
     <div class="div-block-50">
       <h1 class="heading-8">Great Trades Start with Better Insights</h1>
@@ -79,7 +79,6 @@
   #sib-container a {
     text-decoration: underline;
     color: #2BB2FC;
-    max-width: 285px !important;
   }
 </style>
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
@@ -109,8 +108,8 @@
                 </span>
               </div>
             </div>
-            <div style='max-width: 285px !important;'>
-                          <div id="sib-container" class="sib-container--large sib-container--horizontal" style="max-width: 285px !important;padding:0px;text-align:center; background-color:rgba(63,69,94,1); border-radius:18px; border-width:0px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+            <div></div>
+            <div id="sib-container" class="sib-container--large sib-container--horizontal" style="padding:0px;text-align:center; background-color:rgba(63,69,94,1); max-width:285px; border-radius:18px; border-width:0px; border-color:#C0CCD9; border-style:solid; direction:ltr">
               <form id="sib-form" method="POST" action="https://bdf30f88.sibforms.com/serve/MUIFAKibZYzclIN2wwQOhm6jGk7SbzrzKy3W2T-psOaXzXTId8YTaSaS9C32Oa8BpJ5TvetWdgCw5Ethkokz9OeXDct3GykG2IXx2vo8VeTq8zHX6SadTjBrAKuXB6VOgKyY4-0Mzdb9jrY9qAoZMvMATRNKQNxTNXGzQlsTpGVNBQ1fk7zCFZxp5LZ4zgObz0KkxSvMQFYplax6" data-type="subscription">
                 <div style="padding-top: 8px 0;">
                   <div class="sib-input sib-form-block">
@@ -142,8 +141,6 @@
                 <input type="hidden" name="locale" value="en">
               </form>
             </div>
-            </div>
-
           </div>
         </div>
         <!--  END - We recommend to place the above code where you want the form in your website html   -->
@@ -227,36 +224,5 @@ setInterval(updateCountdown, 1000);
 // Run immediately on load
 updateCountdown();
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var formContainer = document.getElementById("sib-container");
-    var formElement = document.getElementById("sib-form");
-    var successMessage = document.getElementById("success-message");
-
-    // Function to hide the form when the success message appears
-    function hideFormOnSuccess() {
-      if (successMessage && successMessage.style.display !== "none") {
-        formContainer.style.display = "none"; // Hide form
-      }
-    }
-
-    // Listen for form submission
-    formElement.addEventListener("submit", function () {
-      // Wait a short delay for success message to appear
-      setTimeout(hideFormOnSuccess, 2000); // Adjust delay if needed
-    });
-
-    // Also check for style changes to the success message
-    var observer = new MutationObserver(function () {
-      hideFormOnSuccess();
-    });
-
-    if (successMessage) {
-      observer.observe(successMessage, { attributes: true, attributeFilter: ["style"] });
-    }
-  });
-</script>
-
-
 </body>
 </html>
