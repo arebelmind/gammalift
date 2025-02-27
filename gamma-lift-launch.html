@@ -227,34 +227,36 @@ setInterval(updateCountdown, 1000);
 // Run immediately on load
 updateCountdown();
 </script>
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     var formContainer = document.getElementById("sib-container");
+    var formElement = document.getElementById("sib-form");
     var successMessage = document.getElementById("success-message");
 
-    // Function to hide the form when success message appears
+    // Function to hide the form when the success message appears
     function hideFormOnSuccess() {
-      if (window.getComputedStyle(successMessage).display !== "none") {
+      if (successMessage && successMessage.style.display !== "none") {
         formContainer.style.display = "none"; // Hide form
       }
     }
 
-    // Observer to detect changes in the success message visibility
-    var observer = new MutationObserver(function (mutations) {
-      mutations.forEach(function (mutation) {
-        if (mutation.attributeName === "style") {
-          hideFormOnSuccess();
-        }
-      });
+    // Listen for form submission
+    formElement.addEventListener("submit", function () {
+      // Wait a short delay for success message to appear
+      setTimeout(hideFormOnSuccess, 2000); // Adjust delay if needed
     });
 
-    // Start observing changes in the success message element
-    observer.observe(successMessage, { attributes: true });
+    // Also check for style changes to the success message
+    var observer = new MutationObserver(function () {
+      hideFormOnSuccess();
+    });
 
-    // Also check manually every second in case mutation doesn't catch it
-    setInterval(hideFormOnSuccess, 1000);
+    if (successMessage) {
+      observer.observe(successMessage, { attributes: true, attributeFilter: ["style"] });
+    }
   });
 </script>
+
 
 </body>
 </html>
