@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat Mar 15 2025 20:33:42 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun Mar 23 2025 16:25:43 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="67cb0c97cff5dff89458a854" data-wf-site="65f1daffa1976517c30f5540" lang="en">
 <head>
   <meta charset="utf-8">
@@ -21,7 +21,15 @@
   <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic","Red Hat Display:regular,italic,500,500italic,700,700italic,900","Permanent Marker:regular"]  }});</script>
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="../images/favicon.svg" rel="shortcut icon" type="image/x-icon">
-  <link href="../images/webclip.svg" rel="apple-touch-icon"><!--  Memberstack webflow package  -->
+  <link href="../images/webclip.svg" rel="apple-touch-icon"><!--  Google tag (gtag.js)  -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WL6PYW0G6R"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WL6PYW0G6R');
+</script>
+  <!--  Memberstack webflow package  -->
   <script data-memberstack-app="app_cltr3jaku005p0spt1o5yh568" src="https://static.memberstack.com/scripts/v1/memberstack.js" type="text/javascript"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
   <!--  Select2 CSS (Styles the dropdowns)  -->
@@ -36,81 +44,67 @@
     margin: 0;
 }
 </style>
-<style>
-  /* Set a fixed height for the selection box */
-   .select2-container--default .select2-selection--multiple {
-     display: flex !important;
-     flex-wrap: wrap !important;
-     gap: 5px;
-     padding: 5px;
-     max-width: 100% !important;
-     min-height: 40px;
-     height: 100px;  /* Fixed height (adjust as needed) */
-     overflow-y: auto; /* Add vertical scrolling if items exceed the height */
-   }
-   /* Force selected items to appear in two columns */
-   .select2-container--default .select2-selection--multiple .select2-selection__choice {
-     display: inline-block !important;
-     width: calc(50% - 5px) !important; /* 50% width minus spacing */
-     text-align: center;
-     white-space: nowrap !important;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     margin:0px;
-   }
- 
- 
- 
- /* Adjust the height of the select box */
- #strike {
-     height: auto !important;
-     min-height: 40px;
-     max-height: 150px; /* Restrict excessive height */
-     overflow-y: auto; /* Allow scrolling */
-     display: block;
-     padding: 5px;
- }
- /* Properly stacks selected items while keeping them visible */
- .select2-container--default .select2-selection--multiple {
-     min-height: 40px !important; /* Prevent unnecessary height expansion */
-     max-height: 150px !important; /* Set a limit to prevent excessive height */
-     overflow-y: auto !important; /* Add scroll instead of pushing down */
-     display: block !important; /* Stack selections properly */
-     flex-wrap: wrap !important;
-     align-items: start !important;
- }
- /* Ensures selected options remain properly stacked */
- .select2-container--default .select2-selection__rendered {
-     max-height: 120px !important;
-     overflow-y: auto !important;
-     white-space: normal !important; /* Allow stacking instead of horizontal layout */
-     display: block !important; /* Forces stacked layout */
- }
- /* Ensures dropdown behaves correctly */
- .select2-dropdown {
-     /*max-height: 200px !important;*/
-     overflow-y: auto !important;
- }
- 
- .chart-container {
-     position: relative;  /* Ensure it’s positioned relative to its parent */
- }
- 
- 
- .close-icon-chart {
-     position: absolute;
-     top: -10px;
-     right: 1% !important;
-     cursor: pointer;
- }
- 
- @media (max-width: 768px) {
-     .close-icon-chart {
-         display: none; /* Hide SVG on smaller screens */
-     }
- }
- 
-
+  <style>
+ /* Set a fixed height for the selection box */
+  .select2-container--default .select2-selection--multiple {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px;
+    padding: 5px;
+    max-width: 100% !important;
+    min-height: 40px;
+    height: 100px;  /* Fixed height (adjust as needed) */
+    overflow-y: auto; /* Add vertical scrolling if items exceed the height */
+  }
+  /* Force selected items to appear in two columns */
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    display: inline-block !important;
+    width: calc(50% - 5px) !important; /* 50% width minus spacing */
+    text-align: center;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:0px;
+  }
+#strike-expiration .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    display: block !important; /* Makes each selection take up the whole line */
+    width: 100% !important; /* Ensure each selection occupies the entire width */
+    text-align: center;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+}
+/* Adjust the height of the select box */
+#strike {
+    height: auto !important;
+    min-height: 40px;
+    max-height: 150px; /* Restrict excessive height */
+    overflow-y: auto; /* Allow scrolling */
+    display: block;
+    padding: 5px;
+}
+/* Properly stacks selected items while keeping them visible */
+.select2-container--default .select2-selection--multiple {
+    min-height: 40px !important; /* Prevent unnecessary height expansion */
+    max-height: 150px !important; /* Set a limit to prevent excessive height */
+    overflow-y: auto !important; /* Add scroll instead of pushing down */
+    display: block !important; /* Stack selections properly */
+    flex-wrap: wrap !important;
+    align-items: start !important;
+}
+/* Ensures selected options remain properly stacked */
+.select2-container--default .select2-selection__rendered {
+    max-height: 120px !important;
+    overflow-y: auto !important;
+    white-space: normal !important; /* Allow stacking instead of horizontal layout */
+    display: block !important; /* Forces stacked layout */
+}
+/* Ensures dropdown behaves correctly */
+.select2-dropdown {
+    /*max-height: 200px !important;*/
+    overflow-y: auto !important;
+}
 </style>
   <style>
   /* Ensure the spinner appears outside the chart container, below it */
@@ -156,10 +150,23 @@ background:rgb(0, 0, 0);
       <div class="nav-wrap-5">
         <div class="nav-top">
           <div class="div-block-59">
-            <a href="#" class="logo-link w-inline-block"><img src="../images/LOGO-1000-x-600-px-white---no-background-1.svg" loading="lazy" width="100" alt="" class="image-3"></a>
+            <a href="../index.html" class="logo-link w-inline-block"><img src="../images/LOGO-1000-x-600-px-white---no-background-1.svg" loading="lazy" width="Auto" alt="" class="image-3"></a>
           </div>
           <div class="text-block-41">Menu</div>
           <div class="nav-menu-2">
+            <a href="../member/analysis-library.html" class="nav-link-2 w-inline-block">
+              <div class="code-embed-7 w-embed"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3239_28)">
+                    <path d="M9.51917 6.66558C9.43144 6.61493 9.3586 6.54208 9.30797 6.45435C9.25733 6.36663 9.23068 6.26711 9.23071 6.16582V0.973551C9.23122 0.881571 9.25372 0.791049 9.29633 0.709532C9.33894 0.628016 9.40042 0.557868 9.47565 0.504941C9.55087 0.452014 9.63767 0.417841 9.72878 0.405272C9.8199 0.392704 9.9127 0.402104 9.99945 0.432689C11.6833 1.02866 13.0994 2.20574 13.9932 3.75233C14.8869 5.29892 15.1996 7.1136 14.8751 8.87013C14.8583 8.96096 14.8199 9.04643 14.7632 9.11934C14.7065 9.19225 14.6331 9.25047 14.5492 9.28911C14.4736 9.32447 14.3911 9.3427 14.3076 9.34248C14.2063 9.34252 14.1068 9.31591 14.0191 9.26532L9.51917 6.66558ZM10.3845 1.84758V5.83265L13.8374 7.82518C13.8461 7.71629 13.8461 7.60667 13.8461 7.49994C13.845 6.3305 13.5213 5.18402 12.9106 4.18673C12.2998 3.18944 11.4258 2.38002 10.3845 1.84758ZM0.985095 3.78747C0.991585 3.77449 0.998075 3.76079 1.00601 3.74781C1.01394 3.73483 1.02043 3.72401 1.02836 3.71247C1.68961 2.58301 2.63479 1.64615 3.77005 0.994901C4.9053 0.343652 6.19116 0.000667793 7.49995 0C7.65296 0 7.7997 0.0607823 7.90789 0.168976C8.01609 0.277169 8.07687 0.42391 8.07687 0.576919V7.19923L13.7602 10.5093C13.8262 10.5475 13.8839 10.5985 13.9301 10.6591C13.9762 10.7198 14.0099 10.789 14.0291 10.8628C14.0484 10.9365 14.0528 11.0134 14.0422 11.0889C14.0316 11.1644 14.0061 11.237 13.9672 11.3026C13.1334 12.7225 11.8554 13.8285 10.3305 14.45C8.80563 15.0715 7.1186 15.1738 5.52978 14.7413C3.94095 14.3087 2.53864 13.3653 1.53925 12.0565C0.539868 10.7478 -0.00103939 9.1466 6.06212e-06 7.49994C-0.00165115 6.19764 0.337993 4.91763 0.985095 3.78747ZM6.92303 1.1798C6.00804 1.26402 5.12223 1.54582 4.32676 2.00575C3.53129 2.46567 2.84511 3.09277 2.31561 3.84372L6.92303 6.52712V1.1798ZM7.49995 13.8461C8.50709 13.8435 9.49931 13.6024 10.3954 13.1427C11.2915 12.6829 12.066 12.0175 12.6554 11.2009L7.21798 8.03432L7.20212 8.02422L1.73797 4.84179C1.29198 5.80867 1.09643 6.87222 1.16934 7.9345C1.24225 8.99679 1.58128 10.0237 2.1552 10.9205C2.72913 11.8174 3.51949 12.5554 4.45351 13.0667C5.38753 13.5779 6.43517 13.846 7.49995 13.8461Z" fill="currentColor"></path>
+                  </g>
+                  <defs>
+                    <clippath id="clip0_3239_28">
+                      <rect width="15" height="15.5768" fill="white" transform="matrix(-1 0 0 1 15 0)"></rect>
+                    </clippath>
+                  </defs>
+                </svg></div>
+              <p class="paragraph-4">Analysis Library</p>
+            </a>
             <a href="../member/btc-mstr.html" class="nav-link-2 w-inline-block">
               <div class="code-embed-8 w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_3238_23)">
@@ -173,19 +180,6 @@ background:rgb(0, 0, 0);
                 </svg></div>
               <p>BTC &amp; MSTR</p>
               <div class="text-block-34">Coming<br>Soon</div>
-            </a>
-            <a href="../member/options-chain.html" class="nav-link-2 option-chain-nav w-inline-block">
-              <div class="code-embed-7 w-embed"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_3239_28)">
-                    <path d="M9.51917 6.66558C9.43144 6.61493 9.3586 6.54208 9.30797 6.45435C9.25733 6.36663 9.23068 6.26711 9.23071 6.16582V0.973551C9.23122 0.881571 9.25372 0.791049 9.29633 0.709532C9.33894 0.628016 9.40042 0.557868 9.47565 0.504941C9.55087 0.452014 9.63767 0.417841 9.72878 0.405272C9.8199 0.392704 9.9127 0.402104 9.99945 0.432689C11.6833 1.02866 13.0994 2.20574 13.9932 3.75233C14.8869 5.29892 15.1996 7.1136 14.8751 8.87013C14.8583 8.96096 14.8199 9.04643 14.7632 9.11934C14.7065 9.19225 14.6331 9.25047 14.5492 9.28911C14.4736 9.32447 14.3911 9.3427 14.3076 9.34248C14.2063 9.34252 14.1068 9.31591 14.0191 9.26532L9.51917 6.66558ZM10.3845 1.84758V5.83265L13.8374 7.82518C13.8461 7.71629 13.8461 7.60667 13.8461 7.49994C13.845 6.3305 13.5213 5.18402 12.9106 4.18673C12.2998 3.18944 11.4258 2.38002 10.3845 1.84758ZM0.985095 3.78747C0.991585 3.77449 0.998075 3.76079 1.00601 3.74781C1.01394 3.73483 1.02043 3.72401 1.02836 3.71247C1.68961 2.58301 2.63479 1.64615 3.77005 0.994901C4.9053 0.343652 6.19116 0.000667793 7.49995 0C7.65296 0 7.7997 0.0607823 7.90789 0.168976C8.01609 0.277169 8.07687 0.42391 8.07687 0.576919V7.19923L13.7602 10.5093C13.8262 10.5475 13.8839 10.5985 13.9301 10.6591C13.9762 10.7198 14.0099 10.789 14.0291 10.8628C14.0484 10.9365 14.0528 11.0134 14.0422 11.0889C14.0316 11.1644 14.0061 11.237 13.9672 11.3026C13.1334 12.7225 11.8554 13.8285 10.3305 14.45C8.80563 15.0715 7.1186 15.1738 5.52978 14.7413C3.94095 14.3087 2.53864 13.3653 1.53925 12.0565C0.539868 10.7478 -0.00103939 9.1466 6.06212e-06 7.49994C-0.00165115 6.19764 0.337993 4.91763 0.985095 3.78747ZM6.92303 1.1798C6.00804 1.26402 5.12223 1.54582 4.32676 2.00575C3.53129 2.46567 2.84511 3.09277 2.31561 3.84372L6.92303 6.52712V1.1798ZM7.49995 13.8461C8.50709 13.8435 9.49931 13.6024 10.3954 13.1427C11.2915 12.6829 12.066 12.0175 12.6554 11.2009L7.21798 8.03432L7.20212 8.02422L1.73797 4.84179C1.29198 5.80867 1.09643 6.87222 1.16934 7.9345C1.24225 8.99679 1.58128 10.0237 2.1552 10.9205C2.72913 11.8174 3.51949 12.5554 4.45351 13.0667C5.38753 13.5779 6.43517 13.846 7.49995 13.8461Z" fill="currentColor"></path>
-                  </g>
-                  <defs>
-                    <clippath id="clip0_3239_28">
-                      <rect width="15" height="15.5768" fill="white" transform="matrix(-1 0 0 1 15 0)"></rect>
-                    </clippath>
-                  </defs>
-                </svg></div>
-              <p class="paragraph-4">Options Chain</p>
             </a>
             <a href="../member/options-performance-explorer.html" aria-current="page" class="nav-link-2 w-inline-block w--current">
               <div class="code-embed-6 w-embed"><svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor">
@@ -239,25 +233,35 @@ background:rgb(0, 0, 0);
               <p>Settings</p>
             </a>
           </div>
+          <a href="../member/request-a-feature.html" class="link-19">Request a new feature!</a>
         </div>
       </div>
     </nav>
     <div class="mobile-nav">
       <div>
-        <div data-w-id="7b8a8f94-7b34-ef8e-38df-2ec419a6e1a1" class="top-links mobile"><img src="../images/transparent-white-profile-image.svg" alt="profile image" data-ms-member="profile-image" class="ms-dropdown-image">
-          <div>
-            <div data-ms-member="name" class="text-block-52">Your Name</div>
-            <div data-ms-member="email" class="ms-dropdown-email">email@email.com</div>
+        <div data-hover="false" data-delay="0" data-ms-content="members" class="dropdown-mobile w-dropdown">
+          <div class="ms-profile-dropdown-2 w-dropdown-toggle"><img src="../images/transparent-white-profile-image.svg" alt="" data-ms-member="profile-image" class="ms-dropdown-image-2">
+            <div class="ms-dropdown-text">
+              <div class="ms-dropdown-name">
+                <div data-ms-member="name" class="text-block-60">Your Name</div>
+              </div>
+              <div data-ms-member="email" class="ms-dropdown-email-2 mobile-email">email@email.com</div>
+            </div>
+            <div class="ms-profile-svg-wrap-2">
+              <div class="ms-profile-icon-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                  <path fill="white" d="m8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path>
+                </svg></div>
+            </div>
           </div>
-          <div class="ms-profile-svg-wrap div-block-66">
-            <div class="ms-profile-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
-                <path fill="currentColor" d="m8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path>
-              </svg></div>
-          </div>
+          <nav class="ms-dropdown-menu-3 w-dropdown-list">
+            <a modal="account" data-w-id="58b0470a-b1e8-c15a-d107-0a4d211f0b55" href="#" class="ms-dropdown-link-3 w-dropdown-link">My Profile</a>
+            <a href="../member/contact.html" class="ms-dropdown-link-3 w-dropdown-link">Contact</a>
+            <a data-ms-action="logout" href="../index.html" class="ms-dropdown-link-3 w-dropdown-link">Logout</a>
+          </nav>
         </div>
         <div class="div-block-67">
           <a modal="account" data-w-id="c67d1ad3-2dd8-b33d-4463-5e5ea428a6e1" href="#" class="link-10">My Account</a>
-          <a href="../contact.html" class="link-10">Contact</a>
+          <a href="../member/contact.html" class="link-10">Contact</a>
           <a data-ms-action="logout" href="#" class="link-10">Log out</a>
         </div>
       </div>
@@ -267,11 +271,233 @@ background:rgb(0, 0, 0);
         <div data-w-id="7b8a8f94-7b34-ef8e-38df-2ec419a6e1b0" class="hamburger-line-4 bot"></div>
       </div>
     </div>
+    <div class="ms2-modal is-profile ms2-modal-dashboard">
+      <a data-w-id="4488c333-606d-65a3-5ed8-def146cb0d16" href="#" class="ms2-close w-inline-block">
+        <div class="ms2-svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewbox="0 0 24 24" width="1000px" fill="currentColor">
+            <path d="M0 0h24v24H0V0z" fill="none"></path>
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+          </svg></div>
+      </a>
+      <div class="ms2-modal-row">
+        <div class="ms2-modal-nav">
+          <div class="ms2-modal-padding is-20 is-sidebar">
+            <div data-ms-member="email" class="ms2-hide-mp">email@memberstack.com</div>
+            <div class="ms2-space is-12"></div>
+            <div class="ms2-space is-8"></div>
+            <div data-current="Profile" data-easing="ease" data-duration-in="300" data-duration-out="100" class="ms2-static w-tabs">
+              <div class="w-tab-menu">
+                <a data-w-tab="Profile" class="ms2-nav-link w-inline-block w-tab-link w--current">
+                  <div class="ms2-flex-row-center">
+                    <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"></path>
+                      </svg></div>
+                    <div class="ms2-space is-8"></div>
+                    <div><span class="ms2-hide-ml">My </span>Profile</div>
+                  </div>
+                  <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                      <path d="M0 0h24v24H0V0z" fill="none"></path>
+                      <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
+                    </svg></div>
+                </a>
+                <a data-w-tab="Password" class="ms2-nav-link w-inline-block w-tab-link">
+                  <div class="ms2-flex-row-center">
+                    <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                        <g>
+                          <path d="M0,0h24v24H0V0z" fill="none"></path>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M3,17h18c0.55,0,1,0.45,1,1v0c0,0.55-0.45,1-1,1H3c-0.55,0-1-0.45-1-1v0C2,17.45,2.45,17,3,17z M2.5,12.57 c0.36,0.21,0.82,0.08,1.03-0.28L4,11.47l0.48,0.83c0.21,0.36,0.67,0.48,1.03,0.28l0,0c0.36-0.21,0.48-0.66,0.28-1.02L5.3,10.72 h0.95C6.66,10.72,7,10.38,7,9.97v0c0-0.41-0.34-0.75-0.75-0.75H5.3L5.77,8.4C5.98,8.04,5.86,7.58,5.5,7.37l0,0 C5.14,7.17,4.68,7.29,4.47,7.65L4,8.47L3.53,7.65C3.32,7.29,2.86,7.17,2.5,7.37l0,0C2.14,7.58,2.02,8.04,2.23,8.4L2.7,9.22H1.75 C1.34,9.22,1,9.56,1,9.97v0c0,0.41,0.34,0.75,0.75,0.75H2.7l-0.48,0.83C2.02,11.91,2.14,12.37,2.5,12.57L2.5,12.57z M10.5,12.57 L10.5,12.57c0.36,0.21,0.82,0.08,1.03-0.28L12,11.47l0.48,0.83c0.21,0.36,0.67,0.48,1.03,0.28l0,0c0.36-0.21,0.48-0.66,0.28-1.02 l-0.48-0.83h0.95c0.41,0,0.75-0.34,0.75-0.75v0c0-0.41-0.34-0.75-0.75-0.75H13.3l0.47-0.82c0.21-0.36,0.08-0.82-0.27-1.03l0,0 c-0.36-0.21-0.82-0.08-1.02,0.27L12,8.47l-0.47-0.82c-0.21-0.36-0.67-0.48-1.02-0.27l0,0c-0.36,0.21-0.48,0.67-0.27,1.03 l0.47,0.82H9.75C9.34,9.22,9,9.56,9,9.97v0c0,0.41,0.34,0.75,0.75,0.75h0.95l-0.48,0.83C10.02,11.91,10.14,12.37,10.5,12.57z M23,9.97c0-0.41-0.34-0.75-0.75-0.75H21.3l0.47-0.82c0.21-0.36,0.08-0.82-0.27-1.03l0,0c-0.36-0.21-0.82-0.08-1.02,0.27L20,8.47 l-0.47-0.82c-0.21-0.36-0.67-0.48-1.02-0.27l0,0c-0.36,0.21-0.48,0.67-0.27,1.03l0.47,0.82h-0.95C17.34,9.22,17,9.56,17,9.97v0 c0,0.41,0.34,0.75,0.75,0.75h0.95l-0.48,0.83c-0.21,0.36-0.08,0.82,0.28,1.02l0,0c0.36,0.21,0.82,0.08,1.03-0.28L20,11.47 l0.48,0.83c0.21,0.36,0.67,0.48,1.03,0.28l0,0c0.36-0.21,0.48-0.66,0.28-1.02l-0.48-0.83h0.95C22.66,10.72,23,10.38,23,9.97 L23,9.97z"></path>
+                          </g>
+                        </g>
+                      </svg></div>
+                    <div class="ms2-space is-8"></div>
+                    <div>Password</div>
+                  </div>
+                  <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                      <path d="M0 0h24v24H0V0z" fill="none"></path>
+                      <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
+                    </svg></div>
+                </a>
+                <a data-w-tab="Upgrade" class="ms2-nav-link w-inline-block w-tab-link">
+                  <div class="ms2-flex-row-center">
+                    <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M21 2.21c-.13 0-.26.05-.35.15l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.8-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.09-.09-.22-.14-.35-.14V21.8c.13 0 .26-.05.35-.15l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.1.1.23.15.35.15V2.21zM17 17H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1z"></path>
+                      </svg></div>
+                    <div class="ms2-space is-8"></div>
+                    <div>Upgrade</div>
+                  </div>
+                  <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                      <path d="M0 0h24v24H0V0z" fill="none"></path>
+                      <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
+                    </svg></div>
+                </a>
+                <a data-w-tab="Billing History" class="ms2-nav-link w-inline-block w-tab-link">
+                  <div class="ms2-flex-row-center">
+                    <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M21 2.21c-.13 0-.26.05-.35.15l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.8-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.09-.09-.22-.14-.35-.14V21.8c.13 0 .26-.05.35-.15l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.1.1.23.15.35.15V2.21zM17 17H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1z"></path>
+                      </svg></div>
+                    <div class="ms2-space is-8"></div>
+                    <div>Billing<span class="ms2-hide-ml"> &amp; Payments</span></div>
+                  </div>
+                  <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                      <path d="M0 0h24v24H0V0z" fill="none"></path>
+                      <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
+                    </svg></div>
+                </a>
+              </div>
+              <div class="ms2-profile-tab-pane w-tab-content">
+                <div data-w-tab="Profile" class="w-tab-pane w--tab-active">
+                  <div class="ms2-modal-padding is-20">
+                    <div class="ms2-heading">Profile</div>
+                    <div class="ms2-space is-12"></div>
+                    <div class="ms2-flex-row ms2-horizontal is-align-center"><img data-ms-member="profile-image" src="../images/transparent-white-profile-image.svg" alt="profile image" class="ms-dropdown-image profile-image">
+                      <div class="ms2-space is-12"></div>
+                      <a data-ms-action="profile-image" href="#" class="ms2-outline-button w-inline-block">
+                        <div class="ms2-svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                            <path d="M7.4,10h1.59v5c0,0.55,0.45,1,1,1h4c0.55,0,1-0.45,1-1v-5h1.59c0.89,0,1.34-1.08,0.71-1.71L12.7,3.7 c-0.39-0.39-1.02-0.39-1.41,0L6.7,8.29C6.07,8.92,6.51,10,7.4,10z M5,19c0,0.55,0.45,1,1,1h12c0.55,0,1-0.45,1-1s-0.45-1-1-1H6 C5.45,18,5,18.45,5,19z"></path>
+                          </svg></div>
+                        <div class="ms2-space is-4"></div>
+                        <div>Replace Image</div>
+                      </a>
+                    </div>
+                    <div class="ms2-space is-24"></div>
+                    <div class="w-form">
+                      <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="profile" data-wf-page-id="67cb0c97cff5dff89458a854" data-wf-element-id="4488c333-606d-65a3-5ed8-def146cb0d4a">
+                        <div>
+                          <div class="ms2-input-wrap"><label for="First-Name-5" class="ms2-label">Full Name</label><input class="ms2-input w-input" maxlength="256" name="First-Name-4" data-name="First Name 4" placeholder="" type="text" id="First-Name-4" data-ms-member="name" required=""></div>
+                        </div><input type="submit" data-wait="Please wait..." class="ms2-button w-button" value="Save Profile">
+                      </form>
+                      <div class="w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                      </div>
+                      <div class="w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Password" class="w-tab-pane">
+                  <div class="ms2-modal-padding is-20">
+                    <div class="ms2-heading">Password</div>
+                    <div class="ms2-space is-24"></div>
+                    <div class="w-form">
+                      <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="password" data-wf-page-id="67cb0c97cff5dff89458a854" data-wf-element-id="4488c333-606d-65a3-5ed8-def146cb0d5d">
+                        <div class="ms2-input-wrap"><label for="Phone-3" class="ms2-label">Current Password</label><input class="ms2-input w-input" maxlength="256" name="Phone-2" data-name="Phone 2" placeholder="" type="password" id="Phone-2" data-ms-member="current-password" required=""></div>
+                        <div class="ms2-input-wrap"><label for="Phone-3" class="ms2-label">New Password</label><input class="ms2-input w-input" maxlength="256" name="Phone-2" data-name="Phone 2" placeholder="" type="password" id="Phone-2" data-ms-member="new-password" required="">
+                          <div class="ms2-input-description">Must be at least 8-characters long.</div>
+                        </div><input type="submit" data-wait="Please wait..." class="ms2-button w-button" value="Update Password">
+                      </form>
+                      <div class="w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                      </div>
+                      <div class="w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Upgrade" class="w-tab-pane">
+                  <div class="ms2-modal-padding is-20">
+                    <div class="ms2-heading">Upgrade to access exclusive features</div>
+                    <div class="ms2-space is-24"></div>
+                    <div class="ms2-14px">
+                      <div class="ms2-space is-12"></div>
+                      <div class="ms2-input-wrap">
+                        <div class="ms2-inline-block">
+                          <a href="../pricing-and-plans-beta.html" class="ms2-button w-inline-block">
+                            <div class="ms2-flex-row-left">
+                              <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                                  <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                  <path d="M18 19H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h5c.55 0 1-.45 1-1s-.45-1-1-1H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1v5c0 .55-.45 1-1 1zM14 4c0 .55.45 1 1 1h2.59l-9.13 9.13c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L19 6.41V9c0 .55.45 1 1 1s1-.45 1-1V4c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1z"></path>
+                                </svg></div>
+                              <div class="ms2-space is-4"></div>
+                              <div>Upgrade</div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="ms2-space is-8"></div>
+                        <div class="ms2-space is-8"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Billing History" class="w-tab-pane">
+                  <div class="ms2-modal-padding is-20">
+                    <div class="ms2-heading">Billing &amp; Payments</div>
+                    <div class="ms2-space is-24"></div>
+                    <div class="ms2-14px">
+                      <p>We partner with Stripe to secure your payment data. Please use the button below to update payment info, cancel, or download past invoices. </p>
+                      <div class="ms2-space is-12"></div>
+                    </div>
+                    <div class="ms2-input-wrap">
+                      <div class="ms2-label">Access Secure Portal</div>
+                      <div class="ms2-inline-block">
+                        <a data-ms-action="customer-portal" href="#" class="ms2-button w-inline-block">
+                          <div class="ms2-flex-row-left">
+                            <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path d="M18 19H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h5c.55 0 1-.45 1-1s-.45-1-1-1H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1v5c0 .55-.45 1-1 1zM14 4c0 .55.45 1 1 1h2.59l-9.13 9.13c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L19 6.41V9c0 .55.45 1 1 1s1-.45 1-1V4c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1z"></path>
+                              </svg></div>
+                            <div class="ms2-space is-4"></div>
+                            <div>Manage Subscriptions</div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="ms2-space is-8"></div>
+                      <div class="ms2-space is-8"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a data-ms-action="logout" href="#" class="ms2-nav-link is-logout w-inline-block">
+              <div class="ms2-flex-row-center">
+                <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
+                    <g>
+                      <path d="M0,0h24v24H0V0z" fill="none"></path>
+                    </g>
+                    <g>
+                      <path d="M17,8l-1.41,1.41L17.17,11H9v2h8.17l-1.58,1.58L17,16l4-4L17,8z M5,5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7v-2H5V5z"></path>
+                    </g>
+                  </svg></div>
+                <div class="ms2-space is-8"></div>
+                <div>Log out</div>
+              </div>
+            </a>
+          </div>
+          <div class="ms2-modal-padding is-20"></div>
+        </div>
+      </div>
+    </div>
     <div class="content-4">
       <div class="content-wrap-4">
         <div class="content-top-3">
           <div class="top-heading"></div>
           <div class="top-links">
+            <div data-hover="false" data-delay="0" data-ms-content="members" class="w-dropdown">
+              <div class="ms-profile-dropdown-2 w-dropdown-toggle"><img src="../images/transparent-white-profile-image.svg" alt="" data-ms-member="profile-image" class="ms-dropdown-image-2">
+                <div class="ms-dropdown-text">
+                  <div class="ms-dropdown-name">
+                    <div data-ms-member="name">Your Name</div>
+                  </div>
+                  <div data-ms-member="email" class="ms-dropdown-email-2">email@email.com</div>
+                </div>
+                <div class="ms-profile-svg-wrap-2">
+                  <div class="ms-profile-icon-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                      <path fill="currentColor" d="m8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <nav class="ms-dropdown-menu-3 w-dropdown-list">
+                <a modal="account" data-w-id="d5e47ab8-4744-1234-55a9-7bf6b92710a1" href="#" class="ms-dropdown-link-3 w-dropdown-link">My Profile</a>
+                <a href="../member/contact.html" class="ms-dropdown-link-3 w-dropdown-link">Contact</a>
+                <a data-ms-action="logout" href="../index.html" class="ms-dropdown-link-3 w-dropdown-link">Logout</a>
+              </nav>
+            </div>
             <div data-hover="false" data-delay="0" data-ms-content="members" class="dropdown-3 w-dropdown">
               <div data-ms-content="members" data-w-id="c2324e81-7f5d-bde4-0308-1a3384813e39" class="ms-profile-dropdown-desktop w-dropdown-toggle"><img src="../images/transparent-white-profile-image.svg" alt="profile image" data-ms-member="profile-image" class="ms-dropdown-image">
                 <div class="ms-dropdown-text">
@@ -288,211 +514,9 @@ background:rgb(0, 0, 0);
               </div>
               <nav class="ms-dropdown-menu-2 w-dropdown-list">
                 <a modal="account" data-w-id="c2324e81-7f5d-bde4-0308-1a3384813e44" href="#" class="ms-dropdown-link-2 w-dropdown-link">My Account</a>
-                <a href="../contact.html" class="ms-dropdown-link-2 w-dropdown-link">Contact</a>
+                <a href="../member/contact.html" class="ms-dropdown-link-2 w-dropdown-link">Contact</a>
                 <a data-ms-action="logout" href="../index.html" class="ms-dropdown-link-2 w-dropdown-link">Logout</a>
               </nav>
-            </div>
-          </div>
-          <div class="ms2-modal is-profile">
-            <a data-w-id="4488c333-606d-65a3-5ed8-def146cb0d16" href="#" class="ms2-close w-inline-block">
-              <div class="ms2-svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewbox="0 0 24 24" width="1000px" fill="currentColor">
-                  <path d="M0 0h24v24H0V0z" fill="none"></path>
-                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
-                </svg></div>
-            </a>
-            <div class="ms2-modal-row">
-              <div class="ms2-modal-nav">
-                <div class="ms2-modal-padding is-20 is-sidebar">
-                  <div data-ms-member="email" class="ms2-hide-mp">email@memberstack.com</div>
-                  <div class="ms2-space is-12"></div>
-                  <div class="ms2-space is-8"></div>
-                  <div data-current="Profile" data-easing="ease" data-duration-in="300" data-duration-out="100" class="ms2-static w-tabs">
-                    <div class="w-tab-menu">
-                      <a data-w-tab="Profile" class="ms2-nav-link w-inline-block w-tab-link w--current">
-                        <div class="ms2-flex-row-center">
-                          <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                              <path d="M0 0h24v24H0V0z" fill="none"></path>
-                              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"></path>
-                            </svg></div>
-                          <div class="ms2-space is-8"></div>
-                          <div><span class="ms2-hide-ml">My </span>Profile</div>
-                        </div>
-                        <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                            <path d="M0 0h24v24H0V0z" fill="none"></path>
-                            <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
-                          </svg></div>
-                      </a>
-                      <a data-w-tab="Password" class="ms2-nav-link w-inline-block w-tab-link">
-                        <div class="ms2-flex-row-center">
-                          <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                              <g>
-                                <path d="M0,0h24v24H0V0z" fill="none"></path>
-                              </g>
-                              <g>
-                                <g>
-                                  <path d="M3,17h18c0.55,0,1,0.45,1,1v0c0,0.55-0.45,1-1,1H3c-0.55,0-1-0.45-1-1v0C2,17.45,2.45,17,3,17z M2.5,12.57 c0.36,0.21,0.82,0.08,1.03-0.28L4,11.47l0.48,0.83c0.21,0.36,0.67,0.48,1.03,0.28l0,0c0.36-0.21,0.48-0.66,0.28-1.02L5.3,10.72 h0.95C6.66,10.72,7,10.38,7,9.97v0c0-0.41-0.34-0.75-0.75-0.75H5.3L5.77,8.4C5.98,8.04,5.86,7.58,5.5,7.37l0,0 C5.14,7.17,4.68,7.29,4.47,7.65L4,8.47L3.53,7.65C3.32,7.29,2.86,7.17,2.5,7.37l0,0C2.14,7.58,2.02,8.04,2.23,8.4L2.7,9.22H1.75 C1.34,9.22,1,9.56,1,9.97v0c0,0.41,0.34,0.75,0.75,0.75H2.7l-0.48,0.83C2.02,11.91,2.14,12.37,2.5,12.57L2.5,12.57z M10.5,12.57 L10.5,12.57c0.36,0.21,0.82,0.08,1.03-0.28L12,11.47l0.48,0.83c0.21,0.36,0.67,0.48,1.03,0.28l0,0c0.36-0.21,0.48-0.66,0.28-1.02 l-0.48-0.83h0.95c0.41,0,0.75-0.34,0.75-0.75v0c0-0.41-0.34-0.75-0.75-0.75H13.3l0.47-0.82c0.21-0.36,0.08-0.82-0.27-1.03l0,0 c-0.36-0.21-0.82-0.08-1.02,0.27L12,8.47l-0.47-0.82c-0.21-0.36-0.67-0.48-1.02-0.27l0,0c-0.36,0.21-0.48,0.67-0.27,1.03 l0.47,0.82H9.75C9.34,9.22,9,9.56,9,9.97v0c0,0.41,0.34,0.75,0.75,0.75h0.95l-0.48,0.83C10.02,11.91,10.14,12.37,10.5,12.57z M23,9.97c0-0.41-0.34-0.75-0.75-0.75H21.3l0.47-0.82c0.21-0.36,0.08-0.82-0.27-1.03l0,0c-0.36-0.21-0.82-0.08-1.02,0.27L20,8.47 l-0.47-0.82c-0.21-0.36-0.67-0.48-1.02-0.27l0,0c-0.36,0.21-0.48,0.67-0.27,1.03l0.47,0.82h-0.95C17.34,9.22,17,9.56,17,9.97v0 c0,0.41,0.34,0.75,0.75,0.75h0.95l-0.48,0.83c-0.21,0.36-0.08,0.82,0.28,1.02l0,0c0.36,0.21,0.82,0.08,1.03-0.28L20,11.47 l0.48,0.83c0.21,0.36,0.67,0.48,1.03,0.28l0,0c0.36-0.21,0.48-0.66,0.28-1.02l-0.48-0.83h0.95C22.66,10.72,23,10.38,23,9.97 L23,9.97z"></path>
-                                </g>
-                              </g>
-                            </svg></div>
-                          <div class="ms2-space is-8"></div>
-                          <div>Password</div>
-                        </div>
-                        <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                            <path d="M0 0h24v24H0V0z" fill="none"></path>
-                            <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
-                          </svg></div>
-                      </a>
-                      <a data-w-tab="Upgrade" class="ms2-nav-link w-inline-block w-tab-link">
-                        <div class="ms2-flex-row-center">
-                          <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                              <path d="M0 0h24v24H0V0z" fill="none"></path>
-                              <path d="M21 2.21c-.13 0-.26.05-.35.15l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.8-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.09-.09-.22-.14-.35-.14V21.8c.13 0 .26-.05.35-.15l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.1.1.23.15.35.15V2.21zM17 17H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1z"></path>
-                            </svg></div>
-                          <div class="ms2-space is-8"></div>
-                          <div>Upgrade</div>
-                        </div>
-                        <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                            <path d="M0 0h24v24H0V0z" fill="none"></path>
-                            <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
-                          </svg></div>
-                      </a>
-                      <a data-w-tab="Billing History" class="ms2-nav-link w-inline-block w-tab-link">
-                        <div class="ms2-flex-row-center">
-                          <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                              <path d="M0 0h24v24H0V0z" fill="none"></path>
-                              <path d="M21 2.21c-.13 0-.26.05-.35.15l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.79-.79c-.2-.2-.51-.2-.71 0l-.79.79c-.2.2-.51.2-.71 0l-.8-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.2-.2-.51-.2-.71 0l-.79.8c-.2.2-.51.2-.71 0l-.79-.8c-.09-.09-.22-.14-.35-.14V21.8c.13 0 .26-.05.35-.15l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.2.2.51.2.71 0l.79-.79c.2-.2.51-.2.71 0l.79.79c.1.1.23.15.35.15V2.21zM17 17H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1z"></path>
-                            </svg></div>
-                          <div class="ms2-space is-8"></div>
-                          <div>Billing<span class="ms2-hide-ml"> &amp; Payments</span></div>
-                        </div>
-                        <div class="ms2-svg is-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                            <path d="M0 0h24v24H0V0z" fill="none"></path>
-                            <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path>
-                          </svg></div>
-                      </a>
-                    </div>
-                    <div class="ms2-profile-tab-pane w-tab-content">
-                      <div data-w-tab="Profile" class="w-tab-pane w--tab-active">
-                        <div class="ms2-modal-padding is-20">
-                          <div class="ms2-heading">Profile</div>
-                          <div class="ms2-space is-12"></div>
-                          <div class="ms2-flex-row ms2-horizontal is-align-center"><img data-ms-member="profile-image" src="../images/transparent-white-profile-image.svg" alt="profile image" class="ms-dropdown-image profile-image">
-                            <div class="ms2-space is-12"></div>
-                            <a data-ms-action="profile-image" href="#" class="ms2-outline-button w-inline-block">
-                              <div class="ms2-svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                                  <path d="M7.4,10h1.59v5c0,0.55,0.45,1,1,1h4c0.55,0,1-0.45,1-1v-5h1.59c0.89,0,1.34-1.08,0.71-1.71L12.7,3.7 c-0.39-0.39-1.02-0.39-1.41,0L6.7,8.29C6.07,8.92,6.51,10,7.4,10z M5,19c0,0.55,0.45,1,1,1h12c0.55,0,1-0.45,1-1s-0.45-1-1-1H6 C5.45,18,5,18.45,5,19z"></path>
-                                </svg></div>
-                              <div class="ms2-space is-4"></div>
-                              <div>Replace Image</div>
-                            </a>
-                          </div>
-                          <div class="ms2-space is-24"></div>
-                          <div class="w-form">
-                            <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="profile" data-wf-page-id="67cb0c97cff5dff89458a854" data-wf-element-id="4488c333-606d-65a3-5ed8-def146cb0d4a">
-                              <div>
-                                <div class="ms2-input-wrap"><label for="First-Name-5" class="ms2-label">Full Name</label><input class="ms2-input w-input" maxlength="256" name="First-Name-4" data-name="First Name 4" placeholder="" type="text" id="First-Name-4" data-ms-member="name" required=""></div>
-                              </div><input type="submit" data-wait="Please wait..." class="ms2-button w-button" value="Save Profile">
-                            </form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div data-w-tab="Password" class="w-tab-pane">
-                        <div class="ms2-modal-padding is-20">
-                          <div class="ms2-heading">Password</div>
-                          <div class="ms2-space is-24"></div>
-                          <div class="w-form">
-                            <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="password" data-wf-page-id="67cb0c97cff5dff89458a854" data-wf-element-id="4488c333-606d-65a3-5ed8-def146cb0d5d">
-                              <div class="ms2-input-wrap"><label for="Phone-3" class="ms2-label">Current Password</label><input class="ms2-input w-input" maxlength="256" name="Phone-2" data-name="Phone 2" placeholder="" type="password" id="Phone-2" data-ms-member="current-password" required=""></div>
-                              <div class="ms2-input-wrap"><label for="Phone-3" class="ms2-label">New Password</label><input class="ms2-input w-input" maxlength="256" name="Phone-2" data-name="Phone 2" placeholder="" type="password" id="Phone-2" data-ms-member="new-password" required="">
-                                <div class="ms2-input-description">Must be at least 8-characters long.</div>
-                              </div><input type="submit" data-wait="Please wait..." class="ms2-button w-button" value="Update Password">
-                            </form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div data-w-tab="Upgrade" class="w-tab-pane">
-                        <div class="ms2-modal-padding is-20">
-                          <div class="ms2-heading">Upgrade to access exclusive features</div>
-                          <div class="ms2-space is-24"></div>
-                          <div class="ms2-14px">
-                            <div class="ms2-space is-12"></div>
-                            <div class="ms2-input-wrap">
-                              <div class="ms2-inline-block">
-                                <a href="../pricing-and-plans-beta.html" class="ms2-button w-inline-block">
-                                  <div class="ms2-flex-row-left">
-                                    <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                                        <path d="M0 0h24v24H0V0z" fill="none"></path>
-                                        <path d="M18 19H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h5c.55 0 1-.45 1-1s-.45-1-1-1H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1v5c0 .55-.45 1-1 1zM14 4c0 .55.45 1 1 1h2.59l-9.13 9.13c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L19 6.41V9c0 .55.45 1 1 1s1-.45 1-1V4c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1z"></path>
-                                      </svg></div>
-                                    <div class="ms2-space is-4"></div>
-                                    <div>Upgrade</div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="ms2-space is-8"></div>
-                              <div class="ms2-space is-8"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div data-w-tab="Billing History" class="w-tab-pane">
-                        <div class="ms2-modal-padding is-20">
-                          <div class="ms2-heading">Billing &amp; Payments</div>
-                          <div class="ms2-space is-24"></div>
-                          <div class="ms2-14px">
-                            <p>We partner with Stripe to secure your payment data. Please use the button below to update payment info, cancel, or download past invoices. </p>
-                            <div class="ms2-space is-12"></div>
-                          </div>
-                          <div class="ms2-input-wrap">
-                            <div class="ms2-label">Access Secure Portal</div>
-                            <div class="ms2-inline-block">
-                              <a data-ms-action="customer-portal" href="#" class="ms2-button w-inline-block">
-                                <div class="ms2-flex-row-left">
-                                  <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                                      <path d="M0 0h24v24H0V0z" fill="none"></path>
-                                      <path d="M18 19H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h5c.55 0 1-.45 1-1s-.45-1-1-1H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1v5c0 .55-.45 1-1 1zM14 4c0 .55.45 1 1 1h2.59l-9.13 9.13c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L19 6.41V9c0 .55.45 1 1 1s1-.45 1-1V4c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1z"></path>
-                                    </svg></div>
-                                  <div class="ms2-space is-4"></div>
-                                  <div>Manage Subscriptions</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="ms2-space is-8"></div>
-                            <div class="ms2-space is-8"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a data-ms-action="logout" href="#" class="ms2-nav-link is-logout w-inline-block">
-                    <div class="ms2-flex-row-center">
-                      <div class="ms2-svg ms2-hide-mp w-embed"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewbox="0 0 24 24" width="24px" fill="currentColor">
-                          <g>
-                            <path d="M0,0h24v24H0V0z" fill="none"></path>
-                          </g>
-                          <g>
-                            <path d="M17,8l-1.41,1.41L17.17,11H9v2h8.17l-1.58,1.58L17,16l4-4L17,8z M5,5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7v-2H5V5z"></path>
-                          </g>
-                        </svg></div>
-                      <div class="ms2-space is-8"></div>
-                      <div>Log out</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="ms2-modal-padding is-20"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -539,14 +563,21 @@ background:rgb(0, 0, 0);
                       <div id="strike-required" class="div-block-82 required"></div>
                     </div>
                     <div id="w-node-_47fee7d3-8858-62ee-e340-19e2d9b06a6f-9458a854" class="div-block-74">
-                      <div class="text-block-53">Expiration (M-D-Y)</div>
+                      <div class="text-block-53">Expiration (m-d-Y)</div>
                       <div class="code-embed-15 w-embed"><select class="js-example-basic-multiple js-states form-control" name="expiration[]" id="expiration" multiple="multiple" data-maximum-selection-length="6" style="min-width: 250px; max-width: 280px; display: block;padding:5px;">
                           <option value="12-19-2025" selected="">12-19-2025</option>
                           <option value="0">Loading...</option>
                         </select></div>
                       <div id="expiration-required" class="div-block-82 required"></div>
                     </div>
-                    
+                    <div class="div-block-74-2">
+                      <div class="text-block-53">Strike/Expiration</div>
+                      <div class="code-embed-15 w-embed"><select class="js-example-basic-multiple js-states form-control" name="strike-expiration[]" id="strike-expiration" multiple="multiple" data-maximum-selection-length="6" style="min-width: 250px; max-width: 280px; display: block;padding:5px;">
+                          <option value="500-12-19-2025" selected="">500 12-19-2025</option>
+                          <option value="0">Loading...</option>
+                        </select></div>
+                      <div id="expiration-required" class="div-block-82 required"></div>
+                    </div>
                   </div>
                   <div class="div-block-85 warning-strikes-expiration-combo">
                     <div class="text-block-57">Some Strikes/Expiration you selected do not exist. <br>Check the <a href="#">Option Chain</a> for valid Strikes/Expirations.</div>
@@ -576,7 +607,7 @@ background:rgb(0, 0, 0);
                     <div class="div-block-72">
                       <div class="text-block-53">Type</div>
                       <div class="code-embed-15 w-embed"><select class="js-example-basic-single js-states form-control" name="option-type[]" id="option-type" style="min-width: 200px; max-width: 280px; display: block;padding:5px;">
-                          <option value="call" selected="">call</option>
+                          <option value="call" selected="">Call</option>
                         </select></div>
                     </div>
                     <div id="w-node-_200fcdb4-deed-da08-4a1f-2b74d1f3d2f5-9458a854" class="div-block-74">
@@ -589,8 +620,8 @@ background:rgb(0, 0, 0);
                     <div class="div-block-72">
                       <div class="text-block-53">Strikes</div>
                       <div class="code-embed-15 w-embed"><select class="js-example-basic-multiple js-states form-control" name="strike[]" id="strike" multiple="multiple" data-maximum-selection-length="6" style="min-width: 250px; max-width: 280px; display: block;padding:5px;">
-                          <option value="400" selected="">400$</option>
-                          <option value="600" selected="">600$</option>
+                          <option value="400" selected="">$400</option>
+                          <option value="600" selected="">$600</option>
                           <option value="0">This is a premium feature</option>
                         </select></div>
                       <div id="strike-required" class="div-block-82 required"></div>
@@ -647,7 +678,6 @@ background:rgb(0, 0, 0);
                         <option value="mark">Premium</option>
                         <option value="price_gain">Stock Price % Change</option>
                         <option value="premium_gain">Premium % Change</option>
-                        <option value="moneyness">Moneyness</option>
                         <option value="implied_volatility">Implied Volatility</option>
                         <option value="gamma">Gamma</option>
                         <option value="delta">Delta</option>
@@ -655,7 +685,6 @@ background:rgb(0, 0, 0);
                         <option value="vega">Vega</option>
                         <option value="rho">Rho</option>
                         <option value="volume">Volume</option>
-                        <option value="">None</option>
                       </select></div>
                   </div>
                   <div class="div-block-77">
@@ -665,7 +694,6 @@ background:rgb(0, 0, 0);
                         <option value="mark" selected="">Premium</option>
                         <option value="price_gain">Stock Price % Change</option>
                         <option value="premium_gain">Premium % Change</option>
-                        <option value="moneyness">Moneyness</option>
                         <option value="implied_volatility">Implied Volatility</option>
                         <option value="gamma">Gamma</option>
                         <option value="delta">Delta</option>
@@ -673,7 +701,6 @@ background:rgb(0, 0, 0);
                         <option value="vega">Vega</option>
                         <option value="rho">Rho</option>
                         <option value="volume">Volume</option>
-                        <option value="">None</option>
                       </select></div>
                   </div>
                   <div class="div-block-76">
@@ -681,24 +708,6 @@ background:rgb(0, 0, 0);
                     <div class="code-embed-15 w-embed"><select class="js-example-basic-single js-states form-control" name="x-axis[]" id="x-axis" style="min-width: 200px;padding:5px;">
                         <option value="date" selected="">Date</option>
                         <option value="days_to_expiration">Days to Expiration</option>
-                      </select></div>
-                  </div>
-                </div>
-                <div class="filters chart-layout chart-type">
-                  <div class="div-block-78">
-                    <div class="text-block-53">Y Left Axis Type</div>
-                    <div class="code-embed-15 w-embed"><select class="js-example-basic-single js-states form-control" name="y-left[]" id="y-left" style="min-width: 200px;padding:5px;">
-                        <option value="price">Lines</option>
-                        <option value="premium">Bars</option>
-                        <option value="premium">Area</option>
-                      </select></div>
-                  </div>
-                  <div class="div-block-77">
-                    <div class="text-block-53">Y Right Axis Type</div>
-                    <div class="code-embed-15 w-embed"><select class="js-example-basic-single js-states form-control" name="y-right[]" id="y-right" style="min-width: 200px;padding:5px;">
-                        <option value="price">Lines</option>
-                        <option value="premium" selected="">Bars</option>
-                        <option value="premium">Area</option>
                       </select></div>
                   </div>
                 </div>
@@ -749,24 +758,6 @@ background:rgb(0, 0, 0);
                       </select></div>
                   </div>
                 </div>
-                <div class="filters chart-layout chart-type">
-                  <div class="div-block-78">
-                    <div class="text-block-53">Y Left Axis Type</div>
-                    <div class="code-embed-15 w-embed"><select class="js-example-basic-single js-states form-control" name="y-left[]" id="y-left" style="min-width: 200px;padding:5px;">
-                        <option value="price">Lines</option>
-                        <option value="premium">Bars</option>
-                        <option value="premium">Area</option>
-                      </select></div>
-                  </div>
-                  <div class="div-block-77">
-                    <div class="text-block-53">Y Right Axis Type</div>
-                    <div class="code-embed-15 w-embed"><select class="js-example-basic-single js-states form-control" name="y-right[]" id="y-right" style="min-width: 200px;padding:5px;">
-                        <option value="price">Lines</option>
-                        <option value="premium" selected="">Bars</option>
-                        <option value="premium">Area</option>
-                      </select></div>
-                  </div>
-                </div>
               </div>
               <div>
                 <div id="spinner" class="spinner">
@@ -783,9 +774,7 @@ background:rgb(0, 0, 0);
                       <div class="spin"></div>
                     </div>
                   </div>
-                  <div id="chart-container" class="chart-container w-embed">
-                    <div id="chart-container" style="width: 100%; height: 300px;"></div>
-                  </div>
+                  <div class="chart-container"></div>
                   <div class="code-embed-13 w-embed">
                     <div id="echartContainer" style="width: 100%; height: 400px;"></div>
                   </div>
@@ -799,6 +788,7 @@ background:rgb(0, 0, 0);
         </div>
       </div>
       <div class="w-embed w-script">
+
 <script src="JS - options-performance-explorer.js"></script>
 
 
